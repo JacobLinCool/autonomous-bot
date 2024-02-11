@@ -1,0 +1,51 @@
+{
+	"private": true,
+	"name": "autonomous-bot",
+	"author": "JacobLinCool <jacoblincool@gmail.com> (https://jacoblin.cool)",
+	"license": "MIT",
+	"keywords": [],
+	"type": "module",
+	"scripts": {
+		"prepare": "husky",
+		"format": "prettier --write --ignore-path .gitignore .",
+		"test": "vitest",
+		"build": "tsup",
+		"start": "DEBUG=cluster,client* node dist/start.js",
+		"dev": "tsup && DEBUG=* node dist/start.js"
+	},
+	"dependencies": {
+		"debug": "^4.3.4",
+		"discord.js": "^14.14.1",
+		"dotenv": "^16.4.2",
+		"openai": "^4.27.0",
+		"zod": "^3.22.4",
+		"zod-to-json-schema": "^3.22.4"
+	},
+	"devDependencies": {
+		"@types/debug": "^4.1.12",
+		"@types/node": "^20.11.17",
+		"husky": "^9.0.10",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"prettier-plugin-organize-imports": "^3.2.4",
+		"tsup": "^8.0.2",
+		"tsx": "^4.7.1",
+		"typedoc": "^0.25.8",
+		"typescript": "^5.3.3",
+		"vitest": "^1.2.2"
+	},
+	"lint-staged": {
+		"*.{ts,js,json,yaml,yml}": [
+			"prettier --write"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JacobLinCool/autonomous-bot.git"
+	},
+	"bugs": {
+		"url": "https://github.com/JacobLinCool/autonomous-bot/issues"
+	},
+	"homepage": "https://jacoblincool.github.io/autonomous-bot",
+	"packageManager": "pnpm@8.15.1"
+}
